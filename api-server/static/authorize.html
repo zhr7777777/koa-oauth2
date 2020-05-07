@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>授权应用</title>
+</head>
+<style>
+  p {
+    margin: 0;
+  }
+  .ant-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0,0,0,.45);
+  }
+  .ant-modal {
+    width: 520px;
+    transform-origin: -212px 393px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    /* padding-bottom: 24px; */
+    pointer-events: none;
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+    pointer-events: auto;
+  }
+
+  .ant-modal-header {
+    padding: 16px 24px;
+    color: rgba(0,0,0,.65);
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .ant-modal-title {
+    margin: 0;
+    color: rgba(0,0,0,.85);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    word-wrap: break-word;
+  }
+
+  .ant-modal-body {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.5715;
+    word-wrap: break-word;
+  }
+
+  .ant-modal-footer {
+    padding: 10px 16px;
+    text-align: right;
+    background: 0 0;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .ant-btn {
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.015);
+    box-shadow: 0 2px 0 rgba(0,0,0,.015);
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: rgba(0,0,0,.65);
+    background-color: #1890ff;
+    border-color: #d9d9d9;
+    color: #fff;
+  }
+
+  .ant-modal-footer button+button {
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+</style>
+
+<body>
+  <div class="ant-modal-mask">
+    <div class="ant-modal">
+      <form method="post">
+        <div class="ant-modal-header">
+          <div class="ant-modal-title">
+            应用授权
+          </div>
+        </div>
+        <div class="ant-modal-body">
+          <p>你确定要授权给应用 <strong>基于koa2实现oauth2</strong> 吗？</p>
+          <p>应用简介：api-server是资源提供方，使用mongodb存储认证的第三方信息，使用redis限制api请求频率。client是第三方客户端，需要经过用户授权才可以调用api-server提供的接口，获取信息。</p>
+        </div>
+        <div class="ant-modal-footer">
+          <div>
+            <button type="submit" class="ant-btn">确定</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

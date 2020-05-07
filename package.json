@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "description": "oauth2-client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pm2": "pm2 start app.js --watch"
+  },
+  "author": "Haoran",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "axios": "^0.19.2",
+    "koa": "^2.11.0"
+  }
+}
